@@ -1,0 +1,127 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.option-btn {
+  padding: 1.125rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+  font-weight: 400;
+  position: relative;
+}
+
+.app.dark .option-btn {
+  border-color: #374151;
+  background: #1f2937;
+}
+
+.option-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: #c0c0c0;
+}
+
+.app.dark .option-btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border-color: #404040;
+}
+
+.option-btn.selected {
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.app.dark .option-btn.selected {
+  border-color: #fff;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+}
+
+.option-btn.highlight {
+  font-weight: 500;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 1.375rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.app.dark .start-btn {
+  background: #fff;
+  color: #000;
+}
+
+.start-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.app.dark .start-btn:hover:not(:disabled) {
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+}
+
+.start-btn:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.start-btn:disabled {
+  background: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.app.dark .start-btn:disabled {
+  background: #2a2a2a;
+  color: #606060;
+}
